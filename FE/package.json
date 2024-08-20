@@ -1,0 +1,47 @@
+{
+  "name": "aucom",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.24.8",
+    "@babel/eslint-parser": "^7.24.8",
+    "axios": "^0.21.4",
+    "eslint": "^8.56.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "^28.6.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-react": "^7.34.4",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-testing-library": "^6.2.2",
+    "pm2": "^5.4.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "test": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

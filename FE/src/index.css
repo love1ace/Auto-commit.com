@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --main-bg-color: #202632;
+    --container-bg-color: #ffffff;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --main-text-color: #202632;
+    --primary-color: rgb(31, 118, 255);
+    --primary-color-hover: rgb(0, 100, 255);
+    --disabled-color: #b8b8b8;
+    --footer-bg-color: #e9ecef;
+    --white-color: #ffffff;
+    --input-color: #ededed;
+}
+
+/* index.css */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; /* 광고와 앱 컨테이너 사이의 여백 */
+}
+
+.App {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.container {
+    max-width: 700px;
+    min-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--container-bg-color);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--main-text-color);
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form > div > div {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+form p {
+    color: #272727;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--main-text-color);
+    font-size: 14px;
+    font-weight: 500;
+    width: 80%;
+}
+
+input {
+    width: 80%;
+    height: auto;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 0;
+    border-radius: 20px;
+    color: #6c6c6c;
+    background-color: var(--input-color);
+}
+
+button {
+    width: 83%;
+    padding: 12px;
+    margin-bottom: 16px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: 0;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+button:disabled {
+    background-color: var(--disabled-color);
+    cursor: not-allowed;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 25px auto;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    background-color: var(--disabled-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.step.active {
+    background-color: var(--primary-color);
+}
+
+.step + .steps-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--disabled-color);
+    margin: 0 10px;
+    align-self: center;
+}
+
+.steps-line.active {
+    background-color: var(--primary-color);
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 89%;
+    margin: 30px auto;
+}
+
+.button-group button {
+    flex: 1;
+    margin: 0 20px;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-step {
+    animation: moveUpDown 0.5s ease;
+}
+
+.step-transition-enter {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.step-transition-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.step-transition-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.step-transition-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+@media screen and (max-width: 740px) {
+    .container {
+        max-width: 350px;
+        min-width: 350px;
+        transition: 0.2s ease;
+    }
+}
+

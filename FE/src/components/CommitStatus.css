@@ -1,0 +1,87 @@
+.commit-status-container {
+    min-width: 330px;
+    min-height: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--container-bg-color);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px var(--box-shadow-color);
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.commit-status-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon-success,
+.icon-failed {
+    margin: 30px 0 10px 0;
+    width: 130px;
+    height: 130px;
+}
+
+.commit-status-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--main-text-color);
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.commit-status-message p {
+    font-size: 18px;
+    color: var(--main-text-color);
+    margin: 10px 0;
+}
+
+.commit-status-actions {
+    margin-top: 40px;
+}
+
+.btn-continue, .btn-retry {
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-continue {
+    padding: 12px;
+    margin-bottom: 16px;
+    color: var(--white-color);
+    border: 0;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #2795f3;
+}
+
+.btn-continue:hover {
+    background-color: #0064ff;
+    color: white;
+}
+
+.btn-retry {
+    width: 70%;
+    padding: 12px;
+    margin-bottom: 16px;
+    color: var(--white-color);
+    border: 0;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #f7484f;
+}
+
+.btn-retry:hover {
+    background-color: #f8272f;
+    color: white;
+}
